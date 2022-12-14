@@ -1,0 +1,41 @@
+body {
+  font-family: system-ui, serif;
+  padding: 3rem;
+  background-color: rgb(173, 166, 156);
+}
+button{
+  color: white;
+  background-color: rgb(35, 80, 80);
+  border: none;
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+}
+.container {
+  container-type: inline-size;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.description {
+  display: none;
+}
+.card {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+@container (min-width: 350px) {
+  .card {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+  }
+}
+@container (min-width: 500px) {
+  .description {
+    display: block;
+  }
+}
